@@ -1,0 +1,300 @@
+/*global*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+:root{
+    --primary: #fc0; 
+}
+body{
+    background-color: rgba(233, 233, 233, 0.377);
+    color: black; 
+    font-family: 'Roboto', sans-serif;
+}
+/*menu*/
+nav{
+    height: 48px; 
+    background-color: rgb(255, 255, 255);
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+img.big-logo{
+    height: 32px; 
+    margin-left: 16px; 
+    display: none; /*hide the element for mobile view*/
+}
+img.small-logo{
+    height: 33px;
+    margin-left: 15px; 
+}
+.login-item, 
+.menu-item{
+    font-family: 'Reem Kufi', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700px;
+    letter-spacing: 3px;
+    color: black; 
+    margin-right: 25px;
+}
+.search-item, 
+.arrows-item{
+    color: black; 
+    margin-right: 25px;
+}
+.renew-item{
+    color: black; 
+    border-bottom: 2px solid var(--primary);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.renew-item:hover{
+    background-color: var(--primary);
+}
+.subs-item{
+    background-color: black;
+    color: white;
+    padding: 16px;
+    margin-right: 25px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    background: linear-gradient(to left, black 50%, var(--primary) 50%) right;
+    background-size: 200%;
+    transition: .3s ease-out;
+}
+.subs-item:hover{
+    background-color: var(--primary);
+    color: black;
+    background-position: left;
+}
+.menu-item, 
+.renew-item, 
+.search-item{
+    display: none; /*hide the elements for mobile view*/
+}
+/*make icons reappear for desktop view*/
+@media(min-width:768px){
+    .menu-item, 
+    .renew-item, 
+    .search-item{
+        display: inline-block; 
+    }
+    img.big-logo{
+        display: block; 
+    }
+    img.small-logo{
+        display:none; 
+    }
+    .menu-item{
+        margin-right: 8px;
+    }
+    .subs-item{
+        margin-left: 12px;
+        margin-right: 20px;
+    }
+}
+
+/*main header section before articles*/
+header{
+    text-align: left;
+    padding: 20px; 
+    width: 100%; 
+}
+h1{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 42px;
+    margin-top: 130px;
+    margin-left: 18px; 
+    margin-bottom: 84px; 
+    font-family: 'Reem Kufi', sans-serif;
+    font-weight: 600;
+}
+h1 span{
+    border-left: 5px solid var(--primary); 
+    margin-left: -4px;
+    margin-right: 20px;
+    font-size: 1px;
+    padding-top: 30px;
+    display: none; 
+}
+header p{
+    background-color: white;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    height: 33px;
+    margin-left: -20px; 
+    padding-left: 30px;
+    padding-top: 20px; 
+}
+header span{
+    border-bottom: 3px solid var(--primary);
+}
+/*main news - first image on page*/
+h3{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-family: 'Reem Kufi', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.first-read-btn{
+    color: white; 
+    text-transform: uppercase; 
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-family: 'Reem Kufi', sans-serif;
+}
+.main-news-item{
+    margin: 10px auto; 
+    position: relative; /*parent*/
+    width: 95%; 
+    margin-bottom: 15px;
+    display: center;
+    overflow: hidden;
+}
+.main-news-item img{
+    transition: all .2s ease;
+    vertical-align: middle;
+}
+.main-news-item:hover img{
+    transform:scale(1.1);
+}
+.main-news-text{
+    position: absolute; /*the child*/
+    top: 190px; 
+    left: 30px; 
+}
+.main-news-text p{
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 17px;
+    margin-top: 5px;
+    color: white; 
+}
+.main-news-text h3{
+    margin-bottom: 10px;
+}
+.main-news-text a{
+    color: white; 
+}
+.main-news-text:hover h3 a{
+    text-decoration: underline;
+}
+/*secondary-news*/
+.secondary-news-item{
+    margin: 10px auto; 
+    width: 95%; 
+    margin-bottom: 20px;
+    display: center;
+    overflow: hidden;
+    border: 1px solid rgb(233, 233, 233); 
+}
+.secondary-news-text{
+    background-color: white;
+    color: black; 
+    margin-top: -16px;
+    height: 120px; 
+    padding: 20px;
+    line-height: 20px;
+    padding-bottom: 50px;
+}
+.secondary-news-item img{
+    height: 400px; 
+    width: 100%; 
+    transition: all .2s ease;
+    vertical-align: middle;
+}
+.secondary-news-item:hover img{
+    transform:scale(1.1);
+}
+.secondary-news-text h3{
+    color: rgb(83, 83, 83); 
+}
+.secondary-news-text p{
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    line-height: 1.3;
+}
+.secondary-news-text a{
+    color: rgb(83, 83, 83); 
+}
+.secondary-news-text:hover h3 a{
+    text-decoration: underline;
+}
+.read-btn{
+    text-transform: uppercase;
+    color: black; 
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-family: 'Reem Kufi', sans-serif;
+}
+@media(min-width: 768px){
+    main{
+        display: flex; 
+        flex-direction: row;
+        justify-content: center;
+    }
+    header{
+        margin-top: 5rem;
+    }
+    h1{
+        margin-top: 75px;
+        margin-left: 12.3rem;
+        margin-bottom: 3rem;
+    }
+    h1 span{
+        display: inline;
+    }
+    header p{
+        font-size: 12px;
+        padding-left: 13.2rem;
+    }
+    .main-news-item{
+        width: 43rem; 
+        margin-bottom: 2rem;
+        margin-left: 25rem; 
+        margin-top: 2rem;
+    }
+    .main-news-item img{
+        width: 43rem; 
+        height: 447px;
+    }
+    .main-news-text{
+        top: 250px; 
+        left: 30px; 
+    }
+    .main-news-text p{
+        font-size: 2.5rem;
+    }
+    .secondary-news-item{
+        width: 20.5rem; 
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+    .secondary-news-item img{
+        height: 15rem; 
+        width: 20.5rem; 
+    }
+    .secondary-news-container{
+        width: 45rem; 
+    }
+    .secondary-news-text{
+        height: 150px; 
+    }
+}
